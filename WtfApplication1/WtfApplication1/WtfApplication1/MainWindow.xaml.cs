@@ -36,5 +36,16 @@ namespace WtfApplication1
             WeighBox.Text = " ";
             WeighBox.Background = Brushes.NavajoWhite;
         }
+
+        private void Button_Click3(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_ClickCalculate(object sender, RoutedEventArgs e)
+        {
+           double  bmi = double.Parse(HeighBox.Text) + double.Parse(WeighBox.Text);\
+            Answer.Text = bmi.ToString();
+        }
     }
 }

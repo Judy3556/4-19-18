@@ -6,15 +6,25 @@
         xmlns:local="clr-namespace:WtfApplication1"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <TextBlock Margin="10 10">身高：</TextBlock>
-        <TextBlock Margin="10 55">体重：</TextBlock>
-        <TextBox Margin=" 60 10 200 280"></TextBox>
-        <TextBox Margin=" 60 50 200 240"></TextBox>
-        <Button Margin=" 10 100 200 180">计算</Button>
-        <Button Margin=" 350 10 50 280">清除</Button>
-        <Button Margin=" 350 50 50 240">清除</Button>
-        <TextBox FontStyle="Normal" FontSize="100" Margin="100,150,140.4,30.4" Foreground="Red" TextAlignment="Center">0</TextBox>
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Height="57" Margin="0,0,0.4,0" >
+            <TextBlock Margin="10 10" >身高：</TextBlock>
+            <TextBox Margin=" 20 10 " Width=" 200" x:Name="HeighBox" ></TextBox>
+            <Button Margin=" 10 10 " x:Name="HeightClearBox" Click="Button_Click" RenderTransformOrigin="0.025,1.399">清除</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="10 20 ">体重：</TextBlock>
+            <TextBox Margin=" 20 20 " Width="200" x:Name="WeighBox"></TextBox>
+            <Button Margin=" 10 10 " x:Name="WeighClearBox" Click="Button_Click2">清除</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="72" Margin="0,0,0.4,0">
+            <Button Margin=" 20 20 " Width=" 200">计算</Button>
+        </StackPanel>
         
-    </Grid>
+        <StackPanel Orientation="Horizontal" Height="130" Margin="0,0,0.4,0">
+            <TextBox FontStyle="Normal" FontSize="100" Margin="100 0 " Foreground="Red" TextAlignment="Center">0</TextBox>
+        </StackPanel>
+        
+        
+    </StackPanel>
 </Window>

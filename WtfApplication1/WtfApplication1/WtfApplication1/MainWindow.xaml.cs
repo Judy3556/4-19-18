@@ -24,5 +24,17 @@ namespace WtfApplication1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            HeighBox.Text = " ";
+            HeighBox.Background = Brushes.NavajoWhite;
+        }
+
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            WeighBox.Text = " ";
+            WeighBox.Background = Brushes.NavajoWhite;
+        }
     }
 }

@@ -44,8 +44,21 @@ namespace WtfApplication1
 
         private void Button_ClickCalculate(object sender, RoutedEventArgs e)
         {
-           double  bmi = double.Parse(HeighBox.Text) + double.Parse(WeighBox.Text);\
+            double h = double.Parse(HeighBox.Text);
+            double w= double.Parse(WeighBox.Text);
+            double bmi = w / (h * h);
             Answer.Text = bmi.ToString();
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            Text_Box1.Text = "勤加锻炼控制饮食，祝您有理想的身材";
+                
+        }
+
+        private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
+        {
+            Text_Box1.Text = "好好保持";
         }
     }
 }

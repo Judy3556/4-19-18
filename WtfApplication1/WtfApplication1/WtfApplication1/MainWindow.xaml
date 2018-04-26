@@ -10,22 +10,22 @@
         <StackPanel Orientation="Horizontal" Height="57" Margin="0,0,0.4,0" >
             
             <TextBlock Margin="10 10" >身高：</TextBlock>
-            <TextBox Margin=" 20 10 " Width=" 200" x:Name="HeighBox" ></TextBox>
+            <TextBox Margin=" 20 10 " Width=" 200" x:Name="HeighBox" TextChanged="HeighBox_TextChanged" >100</TextBox>
             <Button Margin=" 10 10 " x:Name="HeightClearBox" Click="Button_Click" RenderTransformOrigin="0.025,1.399">清除</Button>
         </StackPanel>
-        <Slider Minimum=" 0" Maximum="230"></Slider>
+        <Slider Minimum=" 0" Maximum="230" ValueChanged="HeightBar_ValueChanged" x:Name="HeightBar" TickFrequency=" 1" IsSnapToTickEnabled="True" ></Slider>
         <StackPanel Orientation="Horizontal">
             <TextBlock Margin="10 20 ">体重：</TextBlock>
-            <TextBox Margin=" 20 20 " Width="200" x:Name="WeighBox"></TextBox>
+            <TextBox Margin=" 20 20 " Width="200" x:Name="WeighBox">100</TextBox>
             <Button Margin=" 10 10 " x:Name="WeighClearBox" Click="Button_Click2">清除</Button>
         </StackPanel>
-        <Slider Minimum=" 0" Maximum="230"></Slider>
+        <Slider Minimum=" 0" Maximum="100" ValueChanged="Slider_ValueChanged" x:Name="WeightBar" TickFrequency=" 1" IsSnapToTickEnabled="True"></Slider>
         <StackPanel Orientation="Horizontal" Height="72" Margin="0,0,0.4,0">
             <Button Margin=" 20 20 " Width=" 200" Click="Button_ClickCalculate">计算</Button>
         </StackPanel>
         
         <StackPanel Orientation="Horizontal" Height="130" Margin="0,0,0.4,0">
-            <TextBox FontStyle="Normal" FontSize="100" Margin="100 0 " Foreground="Red" TextAlignment="Center" x:Name="Answer">0</TextBox>
+            <TextBox FontStyle="Normal" FontSize="100" Margin="100 0 " Foreground="Red" TextAlignment="Center" x:Name="Answer" TextChanged="Answer_TextChanged">0</TextBox>
             <StackPanel >
                 <CheckBox Checked="CheckBox_Checked_1">我对我的身材很满意</CheckBox>
             <CheckBox Checked="CheckBox_Checked" >我对我的身材不满意</CheckBox>

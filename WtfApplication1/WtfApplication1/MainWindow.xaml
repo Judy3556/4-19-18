@@ -5,13 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WtfApplication1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" AllowsTransparency="True" WindowStyle="None" Background="Transparent">
     <StackPanel>
-        <TextBlock>Hello</TextBlock>
-        <TextBox>Hello</TextBox>
-        <Button Click="Button_Click">Hello</Button>
-        <TextBlock FontSize="20" Foreground="Red">Hello</TextBlock>
-        <Button Width="100" Height=" 100" Padding=" 100" Margin=" 5 10 20 30" Background="Red" Foreground="White" >Hello</Button>
+        
         
     </StackPanel>
 </Window>

@@ -30,5 +30,10 @@ namespace WtfApplication1
             //建立关闭程式代码
             this.Close();
         }
+
+        private void Title_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

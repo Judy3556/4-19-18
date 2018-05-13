@@ -6,8 +6,28 @@
         xmlns:local="clr-namespace:WtfApplication1"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" AllowsTransparency="True" WindowStyle="None" Background="Transparent">
-    <StackPanel>
+    <Grid Width="350" Height="520" x:Name="Title" MouseLeftButtonDown="Title_MouseLeftButtonDown">
         
-        
-    </StackPanel>
+        <!--視窗陰影-->
+        <Grid.Effect>
+            <DropShadowEffect Opacity="0.25" Direction="-90" Color="#FF000000" BlurRadius="20" ShadowDepth="10"></DropShadowEffect>
+        </Grid.Effect>
+
+        <!--版面區塊限定-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="350"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border Width="350" Height=" 350" CornerRadius="15,15,0,0">
+            
+            <!--色彩漸層-->
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#FFE5B4" Offset="0.0" />
+                    <GradientStop Color="#FFB366" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+            
+        </Border>
+    </Grid>
 </Window>

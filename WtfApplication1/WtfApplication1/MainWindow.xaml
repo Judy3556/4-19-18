@@ -27,7 +27,8 @@
                     <GradientStop Color="#FFB366" Offset="1" />
                 </LinearGradientBrush>
             </Border.Background>
-            
+
+            <TextBlock Margin="10 10 10 10" FontSize="20" Foreground="White">性別</TextBlock>
         </Border>
     </Grid>
 </Window>

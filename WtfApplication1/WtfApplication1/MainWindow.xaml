@@ -36,32 +36,32 @@
         
         <Button Margin=" 50,70,200,240" x:Name="FormalBtn" Click="FormalBtn_Click" Background="Beige" FontSize="20" Foreground="#FFB366" BorderBrush="{x:Null}">世界</Button>
         <Button  Margin=" 200,70,50,240" x:Name="AsianBtn" Click="AsianBtn_Click" Background="Beige" BorderBrush="{x:Null}" FontSize="20" Foreground="#FFB366">亞洲</Button>
-        <TextBlock Foreground="White" Margin="140 140 100 100" FontSize="20">Height</TextBlock>
-        <Slider Margin="20 180 20 140" x:Name="heigtSlider" ValueChanged="heigtSlider_ValueChanged"></Slider>
-        <TextBlock Foreground="White" Margin=" 140 230 100 100" FontSize="20">Weight</TextBlock>
-        <Slider Margin="20 250 20 70" x:Name="weightSlider" ValueChanged="weightSlider_ValueChanged"></Slider>
+        <TextBlock Foreground="White" Margin="140 140 100 100" FontSize="20" x:Name="heightBlock">Height</TextBlock>
+        <Slider Margin="20 180 20 140" Minimum="110" Maximum="200" x:Name="heigtSlider" ValueChanged="heigtSlider_ValueChanged"></Slider>
+        <TextBlock Foreground="White" Margin=" 140 230 100 100" FontSize="20" x:Name="weigtBlock">Weight</TextBlock>
+        <Slider Margin="20 250 20 70" Minimum="30" Maximum="120" x:Name="weightSlider" ValueChanged="weightSlider_ValueChanged"></Slider>
         
         <Border CornerRadius=" 0,0,15,15" Grid.Row="1" Background="White">
             <Canvas Width="350">
                 <StackPanel Margin="20">
-                    <TextBlock FontWeight="Bold">Your Bmi</TextBlock>
+                    <TextBlock FontWeight="Bold" Foreground="#563300">Your Bmi</TextBlock>
 
                     <!--BMI數值-->
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock x:Name="numberOne" FontSize="30" Foreground="Gainsboro">3</TextBlock>
-                        <TextBlock x:Name="numberTwo" FontSize="15" Foreground="Gainsboro">.5</TextBlock>
+                        <TextBlock x:Name="numberOne" FontSize="50"  Margin="10" Foreground="#FF9933">?</TextBlock>
+                        <TextBlock x:Name="numberTwo" FontSize="20" Margin=" 10" Foreground="#FF9933">.?</TextBlock>
                     </StackPanel>
                 </StackPanel>
-                <TextBlock x:Name="bmiText" Margin="100 140 20 20">您的體重標準</TextBlock>
+                <TextBlock x:Name="bmiText" Margin="100 140 20 20" Foreground="#996633">您的體重標準</TextBlock>
                 
                 <!--重置按鈕-->
                 <Grid  Margin="240 5 5 10">
-                    <Ellipse Fill="White" Stroke="#CC9933" StrokeThickness="5" Width=" 80" Height=" 80">
+                    <Ellipse Fill="White" Stroke="#CC9933" StrokeThickness="5" Width=" 80" Height=" 80" x:Name="returnBtn" MouseLeftButtonDown="returnBtn_MouseLeftButtonDown">
                         <Ellipse.Effect>
                             <DropShadowEffect Opacity="0.25" Direction="-90" Color="#563300"></DropShadowEffect>
                         </Ellipse.Effect>
                     </Ellipse>
-                    <TextBlock FontFamily="Windings 3" HorizontalAlignment="Center" VerticalAlignment="Center"> </TextBlock>
+                    <TextBlock FontFamily="Windings 3" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#CC9933" FontWeight="Bold" FontSize="50" FontStyle="Italic">C </TextBlock>
                 </Grid>
             </Canvas>
             

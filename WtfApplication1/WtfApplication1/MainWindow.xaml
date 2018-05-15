@@ -5,17 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WtfApplication1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" AllowsTransparency="True" WindowStyle="None" Background="Transparent">
+        Title="MainWindow" Height="550" Width="525" AllowsTransparency="True" WindowStyle="None" Background="Transparent">
     <Grid Width="350" Height="520" x:Name="Title" MouseLeftButtonDown="Title_MouseLeftButtonDown">
         
         <!--視窗陰影-->
         <Grid.Effect>
             <DropShadowEffect Opacity="0.25" Direction="-90" Color="#FF000000" BlurRadius="20" ShadowDepth="10"></DropShadowEffect>
         </Grid.Effect>
+        
 
         <!--版面區塊限定-->
         <Grid.RowDefinitions>
             <RowDefinition Height="350"></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
         <Border Width="350" Height=" 350" CornerRadius="15,15,0,0">
@@ -28,7 +30,47 @@
                 </LinearGradientBrush>
             </Border.Background>
 
-            <TextBlock Margin="10 10 10 10" FontSize="20" Foreground="White">性別</TextBlock>
+            <!--按鈕與拉桿的設置-->
+            <TextBlock Margin="135 20 20 20" FontSize="21" Foreground="White">體重標準</TextBlock>
         </Border>
+        
+        <Button Margin=" 50,70,200,240" x:Name="FormalBtn" Click="FormalBtn_Click" Background="Beige" FontSize="20" Foreground="#FFB366" BorderBrush="{x:Null}">世界</Button>
+        <Button  Margin=" 200,70,50,240" x:Name="AsianBtn" Click="AsianBtn_Click" Background="Beige" BorderBrush="{x:Null}" FontSize="20" Foreground="#FFB366">亞洲</Button>
+        <TextBlock Foreground="White" Margin="140 140 100 100" FontSize="20">Height</TextBlock>
+        <Slider Margin="20 180 20 140" x:Name="heigtSlider" ValueChanged="heigtSlider_ValueChanged"></Slider>
+        <TextBlock Foreground="White" Margin=" 140 230 100 100" FontSize="20">Weight</TextBlock>
+        <Slider Margin="20 250 20 70" x:Name="weightSlider" ValueChanged="weightSlider_ValueChanged"></Slider>
+        
+        <Border CornerRadius=" 0,0,15,15" Grid.Row="1" Background="White">
+            <Canvas Width="350">
+                <StackPanel Margin="20">
+                    <TextBlock FontWeight="Bold">Your Bmi</TextBlock>
+
+                    <!--BMI數值-->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="numberOne" FontSize="30" Foreground="Gainsboro">3</TextBlock>
+                        <TextBlock x:Name="numberTwo" FontSize="15" Foreground="Gainsboro">.5</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+                <TextBlock x:Name="bmiText" Margin="100 140 20 20">您的體重標準</TextBlock>
+                
+                <!--重置按鈕-->
+                <Grid  Margin="240 5 5 10">
+                    <Ellipse Fill="White" Stroke="#CC9933" StrokeThickness="5" Width=" 80" Height=" 80">
+                        <Ellipse.Effect>
+                            <DropShadowEffect Opacity="0.25" Direction="-90" Color="#563300"></DropShadowEffect>
+                        </Ellipse.Effect>
+                    </Ellipse>
+                    <TextBlock FontFamily="Windings 3" HorizontalAlignment="Center" VerticalAlignment="Center"> </TextBlock>
+                </Grid>
+            </Canvas>
+            
+            <!--關閉按鈕-->
+        </Border>
+        <StackPanel Height="40" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5">
+            <Ellipse Width="15" Height="15" Fill="#FF6666" x:Name="closeBtn" MouseLeftButtonDown="closeBtn_MouseLeftButtonDown"></Ellipse>
+        </StackPanel>
+        
     </Grid>
+    
 </Window>

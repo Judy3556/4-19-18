@@ -20,6 +20,9 @@ namespace WtfApplication1
     /// </summary>
     public partial class MainWindow : Window
     {
+        string heightNumber;
+        string weightNumber;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -34,6 +37,44 @@ namespace WtfApplication1
         private void Title_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
 
+        }
+
+        private void FormalBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AsianBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void weightSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (IsInitialized)
+            {
+                //轉化拉杆數值
+                weightNumber = weightSlider.Value.ToString();
+            }
+
+        }
+
+        private void heigtSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (IsInitialized)
+            {
+                //轉化拉杆數值
+                heightNumber = heigtSlider.Value.ToString();
+
+                double heightWeight = (heigtSlider.Value - heigtSlider.Minimum) / (heigtSlider.Maximum - heigtSlider.Minimum);
+                double range = heigtSlider.ActualWidth - heigtSlider.ActualWidth;
+                double bmi = weightSlider.Value / Math.Pow(heigtSlider.Value / 100, 2);
+            }
+        }
+
+        private void closeBtn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
         }
     }
 }
